@@ -41,7 +41,7 @@ export default [
       poder_especial: "Cauda de sereia e voz mágica",
       animal_companheiro: "Linguado",
       descricao: "Sereia curiosa que sonhava em viver no mundo humano.",
-      ativa: true
+      ativa: false
     },
     {
       id: 5,
@@ -52,7 +52,7 @@ export default [
       poder_especial: "Inteligência e compaixão",
       animal_companheiro: "Fera/Príncipe Adam",
       descricao: "Jovem inteligente que vê além das aparências.",
-      ativa: true
+      ativa: false
     },
     {
       id: 6,

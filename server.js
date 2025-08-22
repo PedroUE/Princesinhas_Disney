@@ -45,12 +45,47 @@ app.get ("/princesas/nome/:nome", (req, res) => {
     if (princesasEncontradas.length > 0) {
    
     res.status(200).json(princesasEncontradas);
-} else {
+    } else {
 
     res.status(404).json({
         mensagem: "prinsa(s) nao encontrada(s)!"
-    });
-}
+        });
+    }
+});
+
+
+app.get ("/princesas/reino/:reino", (req, res) => {
+   
+    let reino = req.params.reino;
+
+    const reinosEncontradas = princesas.filter(p => p.reino.toLowerCase().includes(reino));
+
+    if (reinosEncontradas.length > 0) {
+   
+    res.status(200).json(reinosEncontradas);
+    } else {
+
+    res.status(404).json({
+        mensagem: "O reino não foi encontrado!"
+        });
+    }
+});
+
+app.get ("/princesas/ativa/:ativa", (req, res) => {
+   
+    let ativas = req.params.reino;
+
+    const ativasEncontradas = princesas.filter(p => p.ativa);
+
+    if (ativasEncontradas.length > 0) {
+   
+    res.status(200).json(ativasEncontradas);
+    } else {
+
+    res.status(404).json({
+        mensagem: "a princesa não está ativa!"
+        });
+    }
 });
 
 app.listen(serverPorter, () => {
