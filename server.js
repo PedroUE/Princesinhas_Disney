@@ -36,6 +36,22 @@ app.get ("/princesas/id/:id", (req, res) => {
     }
 });
 
+app.get ("/princesas/nome/:nome", (req, res) => {
+   
+    let nome = req.params.nome.toLowerCase();
+
+    const princesasEncontradas = princesas.filter(p => p.nome.toLowerCase().includes(nome));
+
+    if (princesasEncontradas.length > 0) {
+   
+    res.status(200).json(princesasEncontradas);
+} else {
+
+    res.status(404).json({
+        mensagem: "prinsa(s) nao encontrada(s)!"
+    });
+}
+});
 
 app.listen(serverPorter, () => {
     console.log(`Servidor funcionando na porta http://localhost:${serverPorter}`)
