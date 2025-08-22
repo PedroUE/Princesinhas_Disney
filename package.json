@@ -1,0 +1,26 @@
+{
+  "name": "princesas_disney",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cls && nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroUE/Princesinhas_Disney.git"
+  },
+  "keywords": ["nodemon", "server.js", "Disney"],
+  "author": "Pedro Urbano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PedroUE/Princesinhas_Disney/issues"
+  },
+  "homepage": "https://github.com/PedroUE/Princesinhas_Disney#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
