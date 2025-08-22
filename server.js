@@ -13,7 +13,7 @@ app.get ("/princesas", (req, res) => {
     res.json(princesas);
 });
 
-app.get ("/princesas/id", (req, res) => {
+app.get ("/princesas/id/:id", (req, res) => {
     let id = req.params.id;
 
     id = parseInt(id);
@@ -21,7 +21,7 @@ app.get ("/princesas/id", (req, res) => {
     const princesa = princesas.find(p => p.id === id);
 
     if (princesa) {
-        res.json({
+        res.status(200).json({
             success: true,
             message: `princesa ${princesa.nome} encontrada! ⚡`,
             data: princesa
